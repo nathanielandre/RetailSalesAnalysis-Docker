@@ -1,0 +1,154 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "expectation-cleaned-dataset",
+  "expectations": [
+    {
+      "expectation_type": "expect_table_columns_to_match_ordered_list",
+      "kwargs": {
+        "column_list": [
+          "row_id",
+          "order_id",
+          "order_date",
+          "ship_date",
+          "ship_mode",
+          "customer_id",
+          "customer_name",
+          "segment",
+          "country",
+          "city",
+          "state",
+          "postal_code",
+          "region",
+          "retail_sales_people",
+          "product_id",
+          "category",
+          "sub-category",
+          "product_name",
+          "returned",
+          "sales",
+          "quantity",
+          "discount",
+          "profit"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": [
+          "row_id",
+          "order_id",
+          "order_date",
+          "ship_date",
+          "ship_mode",
+          "customer_id",
+          "customer_name",
+          "segment",
+          "country",
+          "city",
+          "state",
+          "postal_code",
+          "region",
+          "retail_sales_people",
+          "product_id",
+          "category",
+          "sub-category",
+          "product_name",
+          "returned",
+          "sales",
+          "quantity",
+          "discount",
+          "profit"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_unique",
+      "kwargs": {
+        "column": "row_id"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "quantity",
+        "min_value": 0
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "region",
+        "value_set": [
+          "central",
+          "east",
+          "west",
+          "north",
+          "south"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "returned",
+        "value_set": [
+          "yes",
+          "no"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_of_type",
+      "kwargs": {
+        "column": "postal_code",
+        "type_": "int"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_pair_values_a_to_be_greater_than_b",
+      "kwargs": {
+        "column_A": "order_date",
+        "column_B": "ship_date"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_pair_values_a_to_be_greater_than_b",
+      "kwargs": {
+        "column_A": "ship_date",
+        "column_B": "order_date",
+        "or_equal": true
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_value_lengths_to_equal",
+      "kwargs": {
+        "column": "postal_code",
+        "value": 4
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_value_lengths_to_be_between",
+      "kwargs": {
+        "column": "postal_code",
+        "max_value": 5,
+        "min_value": 4
+      },
+      "meta": {}
+    }
+  ],
+  "ge_cloud_id": null,
+  "meta": {
+    "great_expectations_version": "0.18.19"
+  }
+}

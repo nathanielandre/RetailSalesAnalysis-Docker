@@ -1,0 +1,26 @@
+COPY "table_m3" (
+    "Row ID",
+    "Order ID",
+    "Order Date",
+    "Ship Date",
+    "Ship Mode",
+    "Customer ID",
+    "Customer Name",
+    "Segment",
+    "Country",
+    "City",
+    "State",
+    "Postal Code",
+    "Region",
+    "Retail Sales People",
+    "Product ID",
+    "Category",
+    "Sub-Category",
+    "Product Name",
+    "Returned",
+    "Sales",
+    "Quantity",
+    "Discount",
+    "Profit"
+)
+FROM '/opt/postgres/data/P2M3_nathaniel_andre_data_raw.csv' DELIMITER ',' CSV HEADER;
